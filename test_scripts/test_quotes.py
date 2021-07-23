@@ -2,29 +2,29 @@ import requests
 import random
 from src.helpers.environment_vars import Environment as env
 from src.helpers.utils import get_data
+from src.data.payloads import payloads
 
 
 class TestQuotesAPI:
 
     def test_quotes_happy_path_smoke(self):
-        params = {"page": 1}
-        response = get_data(env.URL, params)
-        assert response.status_code == 200
-        json_object = response.json()
-        assert json_object["page"] == 1
+        response = get_data(env.URL, payloads["params_generic"])
+        assert response.status_code == 200, 'Request failed'
+        assert response.json()["page"] == 1, 'Page results returned do not belong to page 1'
 
     def test_quotes_correct_headers_returned(self):
-        params = {"page": 1}
-        response = requests.get(env.URL, params=params)
-        expected_keys = ['Server', 'Connection', 'X-Powered-By', 'Access-Control-Allow-Origin', 'Content-Type', 'Content-Length', 'Etag', 'Date', 'Via']
+        response = get_data(env.URL, payloads["params_generic"])
+        expected_keys = ['Server', 'Connection', 'X-Powered-By', 'Access-Control-Allow-Origin', 'Content-Type',
+                         'Content-Length', 'Etag', 'Date', 'Via']
         result = []
         for key in response.headers.keys():
             if key in expected_keys:
                 result.append(key)
-        assert result == expected_keys
+        assert result == expected_keys, 'Returned headers do not match the expected headers.'
 
     def test_quotes_invalid_payload(self):
-        # Error handling is not implemented, so for a blank page, it returns first page results so we will validate that
+        # Error handling is not implemented, so for a blank page, it returns first page results so we will
+        # validate that.
         params = {"page": False}
         response = requests.get(env.URL, params=params)
         assert response.status_code == 200
