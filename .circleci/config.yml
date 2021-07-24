@@ -21,3 +21,6 @@ jobs:
       - run:
           name: Run tests
           command: pytest -v -s --html=report.html
+
+      - store_artifacts:
+          path: /tmp/pytest_html_report.html
