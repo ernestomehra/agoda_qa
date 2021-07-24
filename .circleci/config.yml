@@ -23,4 +23,4 @@ jobs:
           command: pytest -v -s --html=report.html
 
       - store_artifacts:
-          path: /project/report.html
+          path: ~/project/report.html
