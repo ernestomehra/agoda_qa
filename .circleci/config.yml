@@ -13,7 +13,7 @@ jobs:
     docker:
       - image: cimg/python:3.8
 
-    working_directory: /tmp
+    working_directory: /project
     steps:
       - checkout
       - python/install-packages:
@@ -24,4 +24,4 @@ jobs:
           command: pytest -v -s --html=report.html
 
       - store_artifacts:
-          path: /tmp/pytest_html_report.html
+          path: /project/report.html
