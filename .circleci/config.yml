@@ -20,4 +20,4 @@ jobs:
 
       - run:
           name: Run tests
-          command: pytest
+          command: pytest -v -s --html
