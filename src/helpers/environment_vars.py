@@ -1,3 +1,3 @@
 class Environment:
 
-    URL = "http://staging.quotable.io/quotes"
+    URL = "http://api.quotable.io/quotes"
