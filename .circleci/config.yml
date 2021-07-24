@@ -13,7 +13,6 @@ jobs:
     docker:
       - image: cimg/python:3.8
 
-    working_directory: /project
     steps:
       - checkout
       - python/install-packages:
