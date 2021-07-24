@@ -19,7 +19,7 @@ A brief about the project repository structure:
 - Run tests (without generating reports: `pytest -v`
 - Run tests (with test result generation): `pytest --html=report.html`
 
-## CI/CD Jenkins
+## CI/CD 
 
 
 The project CI/CD pipeline has been set up on CircleCI to be run whenever any PR is merged to master.  For every PR 
