@@ -15,6 +15,7 @@ jobs:
   
     steps:
       - checkout
+      - python/load-cache
       - python/install-packages:
           pkg-manager: pip
       - python/save-cache
