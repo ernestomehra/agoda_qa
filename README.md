@@ -2,7 +2,7 @@
 
 Set up a test automation framework to test APIs listed here: https://github.com/lukePeavey/quotable#examples-1
 
-### Overview
+### Task 1: Automation Framework Overview
 
 A brief about the project repository structure:
 
@@ -30,6 +30,9 @@ URL:
 
 This is a run that was run for a code check-in. Test results are generated under the Artifacts tab and called as `report.html`
 
+### Task 2: API test plan
 
+As part of the second task, an API testing plan was asked to be created. This test plan can be found at path
+`agoda_qa/plans/api_test_plan.pdf`
 
  
