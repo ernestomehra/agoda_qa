@@ -2,7 +2,7 @@
 
 Set up a test automation framework to test APIs listed here: https://github.com/lukePeavey/quotable#examples-1
 
-### Task 1: Automation Framework Overview
+## Task 1: Automation Framework Overview
 
 A brief about the project repository structure:
 
@@ -10,7 +10,7 @@ A brief about the project repository structure:
 - `test_scripts/` contains test cases written using the pytest framework
 - `ci_run_results/` contains snapshots to test result html report and CI pipeline results.
 
-## Instructions to Setup locally and Run tests
+### Instructions to Setup locally and Run tests
 
 - Clone the repository: `git@github.com:ernestomehra/agoda_qa.git`
 - Create a virtual environment with the command: `python3 -m venv venv` on the project root.
@@ -19,7 +19,7 @@ A brief about the project repository structure:
 - Run tests (without generating reports: `pytest -v`
 - Run tests (with test result generation): `pytest --html=report.html`
 
-## CI/CD 
+### CI/CD  
 
 
 The project CI/CD pipeline has been set up on CircleCI to be run whenever any PR is merged to master.  For every PR 
@@ -30,7 +30,7 @@ URL:
 
 This is a run that was run for a code check-in. Test results are generated under the Artifacts tab and called as `report.html`
 
-### Task 2: API test plan
+## Task 2: API test plan
 
 As part of the second task, an API testing plan was asked to be created. This test plan can be found at path
 `agoda_qa/plans/api_test_plan.pdf`
