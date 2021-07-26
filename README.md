@@ -10,7 +10,7 @@ A brief about the project repository structure:
 - `test_scripts/` contains test cases written using the pytest framework
 - `ci_run_results/` contains snapshots to test result html report and CI pipeline results.
 
-### Instructions to Setup locally and Run tests
+### Instructions to setup project and Run tests locally
 
 - Clone the repository: `git@github.com:ernestomehra/agoda_qa.git`
 - Create a virtual environment with the command: `python3 -m venv venv` on the project root.
@@ -35,4 +35,9 @@ This is a run that was run for a code check-in. Test results are generated under
 As part of the second task, an API testing plan was asked to be created. This test plan can be found at path
 `agoda_qa/plans/api_test_plan.pdf`
 
+
+Few Future Enhancements:
+
+- Implement docker development locally.
+- Implement an open source test harness to analyse test breaks-issues on a dashboard which can be user interactive and help QA engineers in taking data-driven decisions. 
  
