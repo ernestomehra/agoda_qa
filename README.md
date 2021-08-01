@@ -40,4 +40,4 @@ Few Future Enhancements:
 
 - Implement docker development locally.
 - Implement an open source test harness to analyse test breaks-issues on a dashboard which can be user interactive and help QA engineers in taking data-driven decisions. 
- 
+- Code lint capabilities to be introduced as well 
